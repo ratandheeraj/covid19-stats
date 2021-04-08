@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19 App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Stalinist+One&display=swap" rel="stylesheet">
+    <style>
+      body{
+        background-color: #a2b29f;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+      }
+      h1{
+        font-family: 'Stalinist One', cursive;
+        text-align: center;
+        padding-top: 10%;
+        font-size: 400%;
+        color: #f8ede3;
+      }
+      p{
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        color: white;
+        font-size: 1.3rem;
+      }
+      footer{
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d-flex flex-column align-content-center container mt-5 p-5">
+      <br />
+      <br />
+      <h1>Covid-19 Stats</h1>
+      <br />
+      <!-- <center><img src="https://image.freepik.com/free-vector/couple-professionals-analyzing-graphs_74855-4393.jpg" width="400px" ></center> -->
+      <p>This webpage tracks the Covid-19 Statistics in all countries, Enter your country name to know more</p>
+      <br/>
+      <form
+        action="/searchCountry"
+        method="GET"
+        class="mt-5 justify-content-center d-flex"
+      >
+        <input
+          type="text"
+          class="form-control w-25"
+          placeholder="Enter the country name"
+          name="country"
+          required
+        />
+        <button class="ml-3 text-center btn btn-success">Search Country</button>
+      </form>
+    </div>
+    <footer>Created by Ratan Dheeraj</footer>
+  </body>
+</html>

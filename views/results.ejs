@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/public/css/styles.css" />
+    <title>Covid-19 | Results</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <style>
+      body{
+        background-color: #a2b29f;
+        font-family: 'Montserrat', sans-serif;
+      }
+      h1{
+        font-family: 'Stalinist One', cursive;
+        text-align: center;
+        font-size: 5rem;
+        color: #f8ede3;
+      }
+      p{
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        color: white;
+        font-size: 1.3rem;
+      }
+      footer{
+        position: absolute;
+        color: white;
+        bottom: 10%;
+        left: 45%;
+      }
+      td{
+        text-align: center;
+        color: white;
+      }
+      th{
+        color: #f8ede3;
+      }
+      footer{
+        position: absolute;
+        color: white;
+        bottom:1%;
+        left: 45%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5 mb-5">
+      <h3>Result of the search :</h3>
+      <section class="d-flex justify-content-center align-content-center">
+        <table class="table table-hower table-bordered p-5 m-5" style="width: 80%; background-color: #798777;">
+          <tr>
+            <td><h1><%= result_data.country %></h1></td>
+            <td >
+              <img
+                src="<%= image_url%>"
+                class="img-fluid"
+                height="150px"
+                width="auto"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Total Cases</th>
+            <td><%= result_data.cases%></td>
+          </tr>
+          <tr>
+            <th>Today's Cases</th>
+            <td><%= result_data.todayCases%></td>
+          </tr>
+          <tr>
+            <th>Total Deaths</th>
+            <td><%= result_data.deaths%></td>
+          </tr>
+          <tr>
+            <th>Today Deaths</th>
+            <td><%= result_data.todayDeaths%></td>
+          </tr>
+          <tr>
+            <th>Total Recovered</th>
+            <td><%= result_data.recovered%></td>
+          </tr>
+          <tr>
+            <th>Today Recovered</th>
+            <td><%= result_data.todayRecovered%></td>
+          </tr>
+          <tr>
+            <th>Active</th>
+            <td><%= result_data.active%></td>
+          </tr>
+          <tr>
+            <th>Critical</th>
+            <td><%= result_data.critical%></td>
+          </tr>
+        </table>
+      </section>
+      <center><h3>Want to perform another search? &nbsp;&nbsp;<a class="btn btn-light" href="/">Home</a> </h3></center>
+    </div>
+    <footer>Created by Ratan Dheeraj</footer>
+  </body>
+</html>
